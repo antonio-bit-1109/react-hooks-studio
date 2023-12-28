@@ -5,7 +5,7 @@ import { Col, Container, Form, Row } from "react-bootstrap";
 // in modo tale che l'aggiornare una prop non comporti la sovrascrittura dell'altra
 
 const StateHook3 = () => {
-    const [persona, handlePersona] = useState({ name: "", surname: "", age: null });
+    const [persona, SetPersona] = useState({ name: "", surname: "", age: null });
 
     return (
         <>
@@ -18,7 +18,7 @@ const StateHook3 = () => {
                             id="inputName"
                             aria-describedby="passwordHelpBlock"
                             value={persona.name}
-                            onChange={(event) => handlePersona({ ...persona, name: event.target.value })}
+                            onChange={(event) => SetPersona({ ...persona, name: event.target.value })}
                         />
                         <Form.Text id="yourName"></Form.Text>
                     </Col>
@@ -29,7 +29,7 @@ const StateHook3 = () => {
                             id="inputSurname"
                             aria-describedby="passwordHelpBlock"
                             value={persona.surname}
-                            onChange={(event) => handlePersona({ ...persona, surname: event.target.value })}
+                            onChange={(event) => SetPersona({ ...persona, surname: event.target.value })}
                         />
                         <Form.Text id="yourSurname"></Form.Text>
                     </Col>
@@ -40,7 +40,7 @@ const StateHook3 = () => {
                             id="inputAge"
                             aria-describedby="ageform"
                             value={persona.age}
-                            onChange={(event) => handlePersona({ ...persona, age: event.target.value })}
+                            onChange={(event) => SetPersona({ ...persona, age: event.target.value })}
                         />
                         <Form.Text id="yourAge"></Form.Text>
                     </Col>

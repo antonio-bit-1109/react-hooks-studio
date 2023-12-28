@@ -9,10 +9,10 @@ const HooksUseState = () => {
     /*  state = {
       componentIsRunning : false
    } */
-    const [number, handleComponentRun] = useState(0);
-    const [color, handleChangeColor] = useState("red");
-    const [shapeHeight, handleShapeHeight] = useState("50px");
-    const [shapeWidth, handleWidth] = useState("50px");
+    const [number, SetComponentRun] = useState(0);
+    const [color, SetChangeColor] = useState("red");
+    const [shapeHeight, SetShapeHeight] = useState("50px");
+    const [shapeWidth, SetWidth] = useState("50px");
 
     return (
         <div className="d-flex justify-content-center align-items-center">
@@ -22,13 +22,13 @@ const HooksUseState = () => {
                     const randomNum0 = Math.floor(Math.random() * 255);
                     const randomNum1 = Math.floor(Math.random() * 255);
                     const randomNum2 = Math.floor(Math.random() * 255);
-                    handleChangeColor(`rgb(${randomNum0}, ${randomNum1}, ${randomNum2})`);
+                    SetChangeColor(`rgb(${randomNum0}, ${randomNum1}, ${randomNum2})`);
                 }}
-                onClick={() => handleComponentRun(number + 1)}
+                onClick={() => SetComponentRun(number + 1)}
                 onMouseLeave={() => {
                     const randomNum3 = Math.floor(Math.random() * 999);
-                    handleShapeHeight(`${randomNum3}px`);
-                    handleWidth(`${randomNum3}px`);
+                    SetShapeHeight(`${randomNum3}px`);
+                    SetWidth(`${randomNum3}px`);
                 }}
             >
                 {" "}
