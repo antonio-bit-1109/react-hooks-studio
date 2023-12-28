@@ -1,0 +1,6 @@
+/* RIASSUNTO UseState */
+
+1: si usa lo usestate per aggiungere uno stato ad una funzione 
+2: lo stato non deve per forza essere un object nella funzione 
+
+const [nomeVar , SetStateFunc] = useState(defaultVal)

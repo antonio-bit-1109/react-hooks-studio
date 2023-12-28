@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+/* SE IL NUOVO VALORE DELLO STATO DIPENDE DAL PRECENDETE VALORE, PUOI PASSARE UN ALTRA FUNZIONE AL SETNUMBER E USARE UN PARAMETRO COME RIFERIMENTO DEL VALORE PRECEDENTE  */
+
 const HookCounter2 = () => {
     const initialValue = 0;
     const [number, SetNumber] = useState(initialValue);

@@ -6,6 +6,9 @@ import { Col, Container, Form, Row } from "react-bootstrap";
 
 const StateHook3 = () => {
     const [persona, SetPersona] = useState({ name: "", surname: "", age: null });
+    console.log("prop name dello stato 'persona'", persona.name);
+    console.log("prop surname dello stato 'persona'", persona.surname);
+    console.log("prop age dello stato 'persona'", persona.age);
 
     return (
         <>
