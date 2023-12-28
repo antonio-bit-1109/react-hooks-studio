@@ -4,7 +4,10 @@ const HookCounter = () => {
     /*  state = { number: 0, name: "" }; */
 
     const [number, setNumber] = useState(0);
+    console.log(number);
+
     const [name, SetName] = useState("");
+    console.log(name);
 
     /* la funzione dentro UseEffect viene chiamata ogni volta che il componente deve essere aggiornato perchè qualcosa è cambiato   */
 
@@ -12,7 +15,7 @@ const HookCounter = () => {
     useEffect(() => {
         console.log("update the title");
         document.title = ` hai cliccato ${number} volte `;
-    }, [number]);
+    }, [number]); /* <--- use effect viene triggherato solo al cambiare di : [valore] */
 
     return (
         <div>
